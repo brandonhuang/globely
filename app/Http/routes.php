@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/style-guide', function() {
+  return view('style_guide');
+});
