@@ -1,4 +1,4 @@
-/* STYLE GUIDE STYLING*/
+/* STYLE GUIDE STYLING IGNORE */
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333; }
@@ -49,26 +49,22 @@ header {
 nav {
   display: inline-block;
   float: right; }
-
-a {
-  font-size: 0.9em;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #F3F3F3; }
-
-a:hover {
-  color: white; }
-
-.with-border {
-  padding: 5px 15px;
-  margin: 0 10px;
-  border: 2px solid #F3F3F3;
-  border-radius: 2px; }
-
-.with-border:hover {
-  border: 2px solid white; }
+  nav a {
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #F3F3F3; }
+    nav a:hover {
+      color: white; }
+  nav .with-border {
+    padding: 5px 15px;
+    margin: 0 10px;
+    border: 2px solid #F3F3F3;
+    border-radius: 2px; }
+    nav .with-border:hover {
+      border: 2px solid white; }
 
 /* BUTTON */
 button {
@@ -84,19 +80,16 @@ button {
   cursor: pointer;
   position: relative;
   top: 0; }
-
-button:hover {
-  top: -1px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); }
-
-button:active {
-  top: 1px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
-
-button:focus {
-  outline: none;
-  top: 1px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  button:hover {
+    top: -1px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); }
+  button:active {
+    top: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  button:focus {
+    outline: none;
+    top: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
 
 /* INPUTS */
 label {
@@ -113,10 +106,9 @@ input[type="text"] {
   width: 400px;
   padding: 0 15px;
   border-radius: 2px; }
-
-input[type="text"]:focus {
-  outline: none;
-  border: 2px solid rgba(11, 72, 107, 0.5);
-  transition-duration: 500ms; }
+  input[type="text"]:focus {
+    outline: none;
+    border: 2px solid rgba(11, 72, 107, 0.5);
+    transition-duration: 500ms; }
 
 /*# sourceMappingURL=app.css.map */
