@@ -11,3 +11,5 @@ Yooooooo!
 YOOOOOOOOOOO!
 
 This edit made by Haley
+
+I just got my git working on my MACCCCCCCCCCCC!
