@@ -8,4 +8,4 @@ This edit was made by Jordan!
 
 This edit made by Haley
 
-Finally got git working --- Harvey
+Finally got git working --- Harvey!
