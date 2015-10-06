@@ -111,10 +111,14 @@ button:focus {
 
 label {
 	font-family: 'Montserrat', sans-serif;
-	display: block;
+	display: inline-block;
 	margin: 10px;
 	font-size: 0.9em;
 	color: #777;
+}
+
+.labelNewline {
+	display: block;
 }
 
 input[type="text"] {
@@ -122,6 +126,15 @@ input[type="text"] {
 	border: 2px solid #DADADA;
 	height: 45px;
 	width: 400px;
+	padding: 0 15px;
+	border-radius: 2px;
+}
+
+input[type="textR"] {
+	box-sizing: border-box;
+	border: 2px solid #DADADA;
+	height: 45px;
+	width: 215px;
 	padding: 0 15px;
 	border-radius: 2px;
 }
@@ -147,4 +160,8 @@ input[type="missionText"] {
 	width: 900px;
 	padding: 0 15px;
 	border-radius: 2px;
+}
+
+.formBackground {
+	background-color: #FFFFFF;
 }
