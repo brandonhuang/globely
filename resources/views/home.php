@@ -15,13 +15,11 @@
       <a href="#">Sign In</a>
       <a href="#" class="with-border">Apply</a>
     </nav>
-    <div class="logo">Globely</div>
+    <div class="logo">Gl<img class="logo-img" src="https://s3-us-west-2.amazonaws.com/globely-assets/logo.png">bely</div>
   </header>
   <section class="slider">
     <div class="content">
-      <h1>The Global Way to Buy and Sell</h1>
-      <h4>Welcome to the new way to bring goods to market</h4>
-      <button class="blue">Log In</button>
+      <button class="green">Log In</button>
       <button class="teal">Apply</button>
     </div>
   </section>
