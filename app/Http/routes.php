@@ -11,18 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('products', 'ProductsController');
+Route::resource('users', 'UsersController');
 
-Route::get('/style-guide', function() {
-  return view('style_guide');
-});
-
-Route::get('/home', function() {
-  return view('home');
-});
-
-Route::get('/how_it_works', function() {
-  return view('how_it_works');
-});
+Route::controller('/', 'StaticController');
