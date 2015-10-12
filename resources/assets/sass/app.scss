@@ -115,6 +115,11 @@ button {
 
 /* INPUTS */
 
+infographic {
+  
+
+}
+
 label {
   font-family: 'Montserrat', sans-serif;
   display: block;
@@ -143,3 +148,10 @@ input[type="text"] {
   background-image: src("http://www.ctamericas.com/content_images/ChinaUS_Full.jpg")
 }
 
+/* IMAGES */
+img.infographic {
+    display: block;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+  }

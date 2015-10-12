@@ -22,3 +22,7 @@ Route::get('/style-guide', function() {
 Route::get('/home', function() {
   return view('home');
 });
+
+Route::get('/how_it_works', function() {
+  return view('how_it_works');
+});
