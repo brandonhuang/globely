@@ -1,14 +1,8 @@
-<!doctype html>
+@extends('layouts.main')
 
-<html>
-<head>
-  <title>Globely Style Guide</title>
-  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
-</head>
-<body>
+@section('title', 'Globely Style Guide')
+
+@section('content')
   <section>
     <div class="content">
       <h1>Globely Style Guide</h1>
@@ -17,14 +11,7 @@
   <section>
     <div class="content">
       <h2>Navbar</h2>
-      <header>
-        <div class="logo">Globely</div>
-        <nav>
-          <a href="#">About</a>
-          <a href="#">Signin</a>
-          <a href="#" class="with-border">Apply</a>
-        </nav>
-      </header>
+      @include('components.navbar')
     </div>
   </section>
   <section>
@@ -59,5 +46,4 @@
       <input id="blue" class="blue" type="text" placeholder="Me too!">
     </div>
   </section>
-</body>
-</html>
+@stop

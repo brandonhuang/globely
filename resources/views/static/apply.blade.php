@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Apply Now</title>
-	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style.css"></link>
-</head>
-<body>
-	<section>
-		<div class="content">
-			<h1>Apply</h1>
-		</div>
-	</section>
-	<section>
-		<div class="content">
-			<h2>Navbar</h2>
-			<header>
-				<div class="logo">Globely</div>
-				<nav>
-					<a href="#">About</a>
-					<a href="#">Signin</a>
-					<a href="#" class="with-border">Apply</a>
-				</nav>
-			</header>
-		</div>
-	</section>
+@extends('layouts.main')
 
-
+@section('content')
 	<section>
 		<div class="content">
 			<p>Thank you for your interest in joining the GLOBELY network. Please make sure you have read over our application procedure and tips on <b>How It Works</b> page before begin</p>
@@ -170,8 +143,6 @@
 		</div>
 	</section>
 
-
-
 	<section>
 		<div id="applyButton">
 			<div class="content">
@@ -179,6 +150,4 @@
 			</div>
 		</div>
 	</section>
-
-</body>
-</html>
+@stop
