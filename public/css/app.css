@@ -32,8 +32,8 @@ input[type="text"].teal:focus {
 input[type="text"].blue:focus {
   border-color: #0B486B; }
 
-/* HEADER */
-header {
+/* NAVBAR */
+.navbar {
   box-sizing: border-box;
   width: 100%;
   height: 50px;
@@ -41,30 +41,30 @@ header {
   color: white;
   line-height: 50px;
   padding: 0 20px; }
-
-.logo {
-  display: inline-block;
-  font-size: 1.5em; }
-
-nav {
-  display: inline-block;
-  float: right; }
-  nav a {
-    font-size: 0.9em;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    padding: 5px 10px;
+  .navbar .logo {
+    display: inline-block;
+    font-size: 1.5em;
     text-decoration: none;
-    color: #F3F3F3; }
-    nav a:hover {
-      color: white; }
-  nav .with-border {
-    padding: 5px 15px;
-    margin: 0 10px;
-    border: 2px solid #F3F3F3;
-    border-radius: 2px; }
-    nav .with-border:hover {
-      border: 2px solid white; }
+    color: white; }
+  .navbar nav {
+    display: inline-block;
+    float: right; }
+    .navbar nav a {
+      font-size: 0.9em;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #F3F3F3; }
+      .navbar nav a:hover {
+        color: white; }
+    .navbar nav .with-border {
+      padding: 5px 15px;
+      margin: 0 10px;
+      border: 2px solid #F3F3F3;
+      border-radius: 2px; }
+      .navbar nav .with-border:hover {
+        border: 2px solid white; }
 
 /* BUTTON */
 button {
