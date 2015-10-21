@@ -7,7 +7,8 @@ section {
   padding: 20px 10px; }
 
 section:nth-of-type(even) {
-  background-color: #FAFAFA; }
+  background-color: #FAFAFA;
+  background: #FAFAFA; }
 
 .content {
   margin: 0 auto;
