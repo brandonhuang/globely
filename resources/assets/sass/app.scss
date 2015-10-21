@@ -85,7 +85,7 @@ input[type="text"].blue:focus { border-color: $blue; }
 
 /* BUTTON */
 
-button {
+button, .button {
   font-family: 'Montserrat', sans-serif;
   margin: 0 10px;
   border: none;
@@ -126,7 +126,30 @@ label {
   color: #777;
 }
 
-input[type="text"] {
+.radio-button {
+  display: inline-block;
+
+  .radio-label {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 20px;
+    border: 2px solid #DADADA;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+  }
+
+  input[type="radio"]:checked ~ .radio-label {
+    border-color: $teal;
+    background-color: $teal;
+    color: white;
+  }
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
   box-sizing: border-box;
   border: 2px solid #DADADA;
   height: 45px;
@@ -141,6 +164,17 @@ input[type="text"] {
   }
 }
 
+input[type="submit"] {
+  @extend button;
+  margin: 10px 0;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
 .slider {
   height: 500px;
   background-image: src("http://www.ctamericas.com/content_images/ChinaUS_Full.jpg")
@@ -148,8 +182,8 @@ input[type="text"] {
 
 /* IMAGES */
 img.infographic {
-    display: block;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  display: block;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}

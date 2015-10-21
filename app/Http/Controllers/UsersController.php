@@ -23,16 +23,6 @@ class UsersController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  Request  $request
@@ -40,7 +30,19 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $params = $request->input();
+
+        $user = new User;
+        $user->type = $params['user-type'];
+        $user->email = $params['email'];
+        $user->password = $params['password'];
+        $user->company_name = $params['company-name'];
+        $user->website = $params['website'];
+        $user->tax_id = $params['tax-id'];
+
+        $user->save();
+
+        return redirect()->action('UsersController@index');
     }
 
     /**
