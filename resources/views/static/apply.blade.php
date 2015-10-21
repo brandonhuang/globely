@@ -8,7 +8,8 @@
 	</section>
 	<section>
 		<div class="content">
-			<form action="">
+			<form method="POST" action="/users">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<label>I am applying as a</label>
 				<div class="radio-button">					
 					<input id="distributor" class="hidden" type="radio" name="user-type" value="distributor">
@@ -21,7 +22,7 @@
 				<label for="email">Email</label>
 				<input id="email" name="email" type="email">
 				<label for="company-name">Company Name</label>
-				<input id="company-name" name="company-email" type="text">
+				<input id="company-name" name="company-name" type="text">
 				<label for="password">Password</label>
 				<input id="password" name="password" type="password">			
 				<label for="confirm-password">Confirm Password</label>
