@@ -14,13 +14,13 @@ section:nth-of-type(even) {
   width: 900px; }
 
 /* PRIMARY COLORS */
-button.green {
+button.green, input.green[type="submit"] {
   background-color: #79BD9A; }
 
-button.teal {
+button.teal, input.teal[type="submit"] {
   background-color: #3B8686; }
 
-button.blue {
+button.blue, input.blue[type="submit"] {
   background-color: #0B486B; }
 
 input[type="text"].green:focus {
@@ -67,7 +67,7 @@ input[type="text"].blue:focus {
         border: 2px solid white; }
 
 /* BUTTON */
-button {
+button, input[type="submit"], .button {
   font-family: 'Montserrat', sans-serif;
   margin: 0 10px;
   border: none;
@@ -80,13 +80,13 @@ button {
   cursor: pointer;
   position: relative;
   top: 0; }
-  button:hover {
+  button:hover, input[type="submit"]:hover, .button:hover {
     top: -1px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); }
-  button:active {
+  button:active, input[type="submit"]:active, .button:active {
     top: 1px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
-  button:focus {
+  button:focus, input[type="submit"]:focus, .button:focus {
     outline: none;
     top: 1px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
@@ -99,17 +99,42 @@ label {
   font-size: 0.9em;
   color: #777; }
 
-input[type="text"] {
+.radio-button {
+  display: inline-block; }
+  .radio-button .radio-label {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 20px;
+    border: 2px solid #DADADA;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0;
+    position: relative; }
+  .radio-button input[type="radio"]:checked ~ .radio-label {
+    border-color: #3B8686;
+    background-color: #3B8686;
+    color: white; }
+
+input[type="text"], input[type="password"], input[type="email"] {
   box-sizing: border-box;
   border: 2px solid #DADADA;
   height: 45px;
   width: 400px;
   padding: 0 15px;
   border-radius: 2px; }
-  input[type="text"]:focus {
+  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
     outline: none;
     border: 2px solid rgba(11, 72, 107, 0.5);
     transition-duration: 500ms; }
+
+input[type="submit"] {
+  margin: 10px 0;
+  display: block; }
+
+.hidden {
+  display: none; }
 
 .slider {
   height: 500px;
