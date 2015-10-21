@@ -15,3 +15,8 @@ Route::resource('products', 'ProductsController');
 Route::resource('users', 'UsersController');
 
 Route::controller('/', 'StaticController');
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController'
+]);
