@@ -2,7 +2,7 @@
 
 @section('content')
   <section class="slider">
-    <div class="content">
+    <div class="content-buttons">
       <button class="green">Log In</button>
       <button class="teal">Apply</button>
     </div>

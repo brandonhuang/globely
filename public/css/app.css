@@ -139,7 +139,8 @@ input[type="submit"] {
 
 .slider {
   height: 500px;
-  background-image: src("http://www.ctamericas.com/content_images/ChinaUS_Full.jpg"); }
+  background-image: url("https://s3-us-west-2.amazonaws.com/globely-assets/map.jpg");
+  background-size: cover; }
 
 /* IMAGES */
 img.infographic {
@@ -147,5 +148,21 @@ img.infographic {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
+
+.content-buttons {
+  margin-top: 300px; }
+
+.product {
+  border: 5px solid;
+  border-color: #3B8686;
+  width: 300px;
+  padding: 10px; }
+  .product .product-title {
+    text-align: center;
+    color: #0B486B; }
+  .product .product-image {
+    text-align: center; }
+  .product .product-desc {
+    border: 1px solid; }
 
 /*# sourceMappingURL=app.css.map */
