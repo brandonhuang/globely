@@ -23,9 +23,11 @@ class StaticController extends Controller
     {
         return view('static.how_it_works');
     }
-
     public function getApply()
     {
         return view('static.apply');
+    }
+    public function getLogin(){
+        return view('static.login');
     }
 }

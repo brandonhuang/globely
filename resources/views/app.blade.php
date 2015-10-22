@@ -19,7 +19,7 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<!-- <nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -28,7 +28,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				 <a class="navbar-brand" href="#">Laravel</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar">
@@ -55,9 +55,9 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 
-	@yield('content')
+	<!--@yield('content')-->
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
