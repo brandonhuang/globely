@@ -1,12 +1,28 @@
 @extends('layouts.main')
 
 @section('content')
-  <section class="slider">
-    <div class="content-buttons">
-      <button class="green">Log In</button>
-      <button class="teal">Apply</button>
+  <div class="gallery autoplay items-3">
+    <div id="item-1" class="control-operator"></div>
+    <div id="item-2" class="control-operator"></div>
+    <div id="item-3" class="control-operator"></div>
+
+    <figure class="item" id="item-1">
+    </figure>
+
+    <figure class="item" id="item-2">
+      <h1>2</h1>
+    </figure>
+
+    <figure class="item" id="item-3">
+      <h1>3</h1>
+    </figure>
+
+    <div class="controls">
+      <a href="#item-1" class="control-button">•</a>
+      <a href="#item-2" class="control-button">•</a>
+      <a href="#item-3" class="control-button">•</a>
     </div>
-  </section>
+  </div>
   <section>
     <div class="content">
       <h1>H1 - Main</h1>
