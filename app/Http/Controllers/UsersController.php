@@ -35,7 +35,7 @@ class UsersController extends Controller
         $user = new User;
         $user->type = $params['user-type'];
         $user->email = $params['email'];
-        $user->password = $params['password'];
+        $user->password = bcrypt($params['password']);
         $user->company_name = $params['company-name'];
         $user->website = $params['website'];
         $user->tax_id = $params['tax-id'];
