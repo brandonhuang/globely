@@ -1,3 +1,388 @@
+.gallery .control-operator:target ~ .controls .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4); }
+
+.gallery .control-button:first-of-type,
+.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+  color: white;
+  color: rgba(255, 255, 255, 0.8); }
+
+.gallery .item:first-of-type {
+  position: static;
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s; }
+
+.gallery .control-operator {
+  display: none; }
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: none;
+  animation: none; }
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -webkit-animation: none;
+  animation: none; }
+
+@-webkit-keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@-webkit-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0; }
+  14.3%, 50% {
+    opacity: 1; }
+  64.3%, 100% {
+    opacity: 0; } }
+
+@keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0; }
+  14.3%, 50% {
+    opacity: 1; }
+  64.3%, 100% {
+    opacity: 0; } }
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.items-2.autoplay .control-button {
+  -webkit-animation: controlAnimation-2 14s infinite;
+  animation: controlAnimation-2 14s infinite; }
+
+.items-2.autoplay .item {
+  -webkit-animation: galleryAnimation-2 14s infinite;
+  animation: galleryAnimation-2 14s infinite; }
+
+.items-2 .control-button:nth-of-type(1),
+.items-2 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s; }
+
+.items-2 .control-button:nth-of-type(2),
+.items-2 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+@-webkit-keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@-webkit-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0; }
+  9.5%, 33.3% {
+    opacity: 1; }
+  42.9%, 100% {
+    opacity: 0; } }
+
+@keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0; }
+  9.5%, 33.3% {
+    opacity: 1; }
+  42.9%, 100% {
+    opacity: 0; } }
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.items-3.autoplay .control-button {
+  -webkit-animation: controlAnimation-3 21s infinite;
+  animation: controlAnimation-3 21s infinite; }
+
+.items-3.autoplay .item {
+  -webkit-animation: galleryAnimation-3 21s infinite;
+  animation: galleryAnimation-3 21s infinite; }
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s; }
+
+.items-3 .control-button:nth-of-type(2),
+.items-3 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+.items-3 .control-button:nth-of-type(3),
+.items-3 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
+
+@-webkit-keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@-webkit-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0; }
+  7.1%, 25% {
+    opacity: 1; }
+  32.1%, 100% {
+    opacity: 0; } }
+
+@keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0; }
+  7.1%, 25% {
+    opacity: 1; }
+  32.1%, 100% {
+    opacity: 0; } }
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.items-4.autoplay .control-button {
+  -webkit-animation: controlAnimation-4 28s infinite;
+  animation: controlAnimation-4 28s infinite; }
+
+.items-4.autoplay .item {
+  -webkit-animation: galleryAnimation-4 28s infinite;
+  animation: galleryAnimation-4 28s infinite; }
+
+.items-4 .control-button:nth-of-type(1),
+.items-4 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s; }
+
+.items-4 .control-button:nth-of-type(2),
+.items-4 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+.items-4 .control-button:nth-of-type(3),
+.items-4 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
+
+.items-4 .control-button:nth-of-type(4),
+.items-4 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  animation-delay: 19s; }
+
+@-webkit-keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); }
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8); }
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4); } }
+
+@-webkit-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0; }
+  5.7%, 20% {
+    opacity: 1; }
+  25.7%, 100% {
+    opacity: 0; } }
+
+@keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0; }
+  5.7%, 20% {
+    opacity: 1; }
+  25.7%, 100% {
+    opacity: 0; } }
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.gallery .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
+  pointer-events: auto;
+  opacity: 1; }
+
+.items-5.autoplay .control-button {
+  -webkit-animation: controlAnimation-5 35s infinite;
+  animation: controlAnimation-5 35s infinite; }
+
+.items-5.autoplay .item {
+  -webkit-animation: galleryAnimation-5 35s infinite;
+  animation: galleryAnimation-5 35s infinite; }
+
+.items-5 .control-button:nth-of-type(1),
+.items-5 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s; }
+
+.items-5 .control-button:nth-of-type(2),
+.items-5 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+.items-5 .control-button:nth-of-type(3),
+.items-5 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
+
+.items-5 .control-button:nth-of-type(4),
+.items-5 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  animation-delay: 19s; }
+
+.items-5 .control-button:nth-of-type(5),
+.items-5 .item:nth-of-type(5) {
+  -webkit-animation-delay: 26s;
+  animation-delay: 26s; }
+
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4); }
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8); }
+
+/*
+  Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative; }
+
+.gallery .item {
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  background: #4d87e2; }
+
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center; }
+
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 0.02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.1s; }
+
 /* STYLE GUIDE STYLING IGNORE */
 body {
   font-family: 'Lato', sans-serif;
@@ -7,13 +392,33 @@ section {
   padding: 20px 10px; }
 
 section:nth-of-type(even) {
-  background-color: #FAFAFA; }
+  background-color: #FAFAFA;
+  background: #FAFAFA; }
 
 .content {
   margin: 0 auto;
   width: 900px; }
 
+/* DEFAULTS */
+figure {
+  margin: 0; }
+
+/* SLIDER IMAGES */
+#item-1 {
+  background-image: url("https://s3-us-west-2.amazonaws.com/globely-assets/map.jpg");
+  background-position: center;
+  background-size: cover; }
+
 /* PRIMARY COLORS */
+.button.green {
+  background-color: #79BD9A; }
+
+.button.teal {
+  background-color: #3B8686; }
+
+.button.blue {
+  background-color: #0B486B; }
+
 button.green, input.green[type="submit"] {
   background-color: #79BD9A; }
 
@@ -112,19 +517,19 @@ label {
     display: inline-block;
     margin: 0;
     position: relative; }
-  .radio-button input[type="radio"]:checked ~ .radio-label {
+  .radio-button input[type="radio"]:checked + .radio-label {
     border-color: #3B8686;
     background-color: #3B8686;
     color: white; }
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="username"], input[type="password"] {
   box-sizing: border-box;
   border: 2px solid #DADADA;
   height: 45px;
   width: 400px;
   padding: 0 15px;
   border-radius: 2px; }
-  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="username"]:focus, input[type="password"]:focus {
     outline: none;
     border: 2px solid rgba(11, 72, 107, 0.5);
     transition-duration: 500ms; }
@@ -136,15 +541,27 @@ input[type="submit"] {
 .hidden {
   display: none; }
 
-.slider {
-  height: 500px;
-  background-image: src("http://www.ctamericas.com/content_images/ChinaUS_Full.jpg"); }
-
 /* IMAGES */
 img.infographic {
   display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
+
+.content-buttons {
+  margin-top: 300px; }
+
+.product {
+  border: 5px solid;
+  border-color: #3B8686;
+  width: 300px;
+  padding: 10px; }
+  .product .product-title {
+    text-align: center;
+    color: #0B486B; }
+  .product .product-image {
+    text-align: center; }
+  .product .product-desc {
+    border: 1px solid; }
 
 /*# sourceMappingURL=app.css.map */
