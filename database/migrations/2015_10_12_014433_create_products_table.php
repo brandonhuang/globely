@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->float('price');
             $table->integer('rating');
-            $table->timestamps();
+            $table->nullableTimestamps();
         });
     }
 

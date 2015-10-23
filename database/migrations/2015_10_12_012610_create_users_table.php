@@ -21,8 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('website'); 
             $table->string('tax_id');
             $table->rememberToken();
-            $table->timestamps();
-
+            $table->nullableTimestamps();
         });
     }
 
