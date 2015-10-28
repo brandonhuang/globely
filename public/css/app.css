@@ -118,14 +118,14 @@ label {
     background-color: #3B8686;
     color: white; }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="username"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="username"] {
   box-sizing: border-box;
   border: 2px solid #DADADA;
   height: 45px;
   width: 400px;
   padding: 0 15px;
   border-radius: 2px; }
-  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="username"]:focus, input[type="password"]:focus {
+  input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="username"]:focus {
     outline: none;
     border: 2px solid rgba(11, 72, 107, 0.5);
     transition-duration: 500ms; }
