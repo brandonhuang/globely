@@ -22,4 +22,7 @@ Globely aims to bridge the gap between Chinese distributers and western European
 3. Direct your browser to http://localhost:8000
   You should be able to see all your changes on refresh.
 
-## Don't forget to git branch when working on a feature.
+## All your Laravel questions can be answered here https://laracasts.com/series/laravel-5-fundamentals
+
+### Don't forget to git branch when working on a feature.
+
