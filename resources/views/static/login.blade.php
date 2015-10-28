@@ -1,3 +1,5 @@
 @extends('layouts.main')
 
-@include('components.addproduct')
+@section('content')
+  @include('components.addproduct')
+@stop
