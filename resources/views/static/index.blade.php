@@ -7,10 +7,42 @@
     <div id="item-3" class="control-operator"></div>
 
     <figure class="item" id="item-1">
+      <div class="slider-left">
+        <h1>The global way to buy and sell.</h1>
+        <h2>Welcome to the new way to bring goods to market.</h2>
+        <a class="button teal" href="/login">Login</a>
+        <a class="button teal" href="/apply">Apply</a>
+      </div>
     </figure>
 
     <figure class="item" id="item-2">
-      <h1>2</h1>
+      <div class="slider-full">
+        <h1>Featured Products</h1>
+        <a class="featured" href="#">
+          <div class="content">
+            <div class="banner">
+              <h3>Outdoor Furniture Set</h3>
+              <h4>Overstock</h4>
+            </div>
+          </div>
+        </a>
+        <a class="featured" href="#">
+          <div class="content">
+            <div class="banner">
+              <h3>Pumpkin Dish</h3>
+              <h4>Sur La Tabel</h4>
+            </div>
+          </div>
+        </a>
+        <a class="featured" href="#">
+          <div class="content">
+            <div class="banner">
+              <h3>Baby Yogurt</h3>
+              <h4>Gerber</h4>
+            </div>
+          </div>
+        </a>
+      </div>
     </figure>
 
     <figure class="item" id="item-3">

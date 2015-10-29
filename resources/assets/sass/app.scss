@@ -1,4 +1,5 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'normalize';
 @import 'gallery';
 
 /* STYLE GUIDE STYLING IGNORE */
@@ -28,12 +29,91 @@ figure {
   margin: 0;
 }
 
-/* SLIDER IMAGES */
+/* SLIDER */
+
+.gallery {
+  .item {
+    color: white;
+    text-align: left;
+  }
+
+  h1  {
+    font-size: 4rem;
+    margin: 0 0 20px 0;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+}
 
 #item-1 {
-  background-image: url("https://s3-us-west-2.amazonaws.com/globely-assets/map.jpg");
+  background-image: url("/images/slider_image_interconnected.png");
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: -1px;
+}
+
+#item-2 {
+  h1 { text-align: center; }
+}
+
+.slider-full {
+  box-sizing: border-box;
+  padding: 100px;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  float: left;
+}
+
+.slider-left {
+  @extend .slider-full;
+  width: 40%;
+  float: left;
+}
+
+.slider-right {
+  @extend .slider-full;
+  width: 40%;
+  float: right;
+}
+
+.slider-center {
+  @extend .slider-full;
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px 40px 40px 420px;
+  height: 50%;
+  width: calc(33.33% - 80px);
+  float: left;
+
+  // Hack for fixed aspect ratios
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 /* PRIMARY COLORS */
@@ -105,8 +185,9 @@ input[type="text"].blue:focus { border-color: $blue; }
 /* BUTTON */
 
 button, .button {
+  display: inline-block;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  margin: 0 10px;
   border: none;
   color: white;
   height: 45px;
@@ -117,6 +198,11 @@ button, .button {
   cursor: pointer;
   position: relative;
   top: 0;
+  text-decoration: none;
+
+  & + & {
+    margin: 0 10px;
+  }
 
   &:hover {
     top: -1px;
