@@ -12,8 +12,6 @@
 */
 
 Route::resource('products', 'ProductsController');
-Route::resource('users', ['middleware' => 'auth', 'uses' => 'UsersController' ]);
-
 
 Route::controller('/', 'StaticController');
 
