@@ -231,8 +231,6 @@ img.infographic {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
   background-color: #FFFFFF;
   margin-bottom: 30px;
-  border: 2px solid;
-  border-color: $teal;
 }
 .card .image {
   max-width: 100%;
@@ -251,4 +249,8 @@ img.infographic {
 
 .product-image {
   width: 180px;
+}
+
+.fa-star, .fa-star-o:hover {
+  background: yellow;
 }
