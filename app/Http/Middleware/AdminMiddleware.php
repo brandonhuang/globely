@@ -15,7 +15,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-         if ($request->user()->type != 'A')
+         if ($request->user()->type != 'supplier || distributor')
         {
             return redirect('home');
         }
