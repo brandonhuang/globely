@@ -12,6 +12,7 @@
 */
 
 Route::resource('products', 'ProductsController');
+Route::resource('users', 'UsersController');
 
 Route::controller('/', 'StaticController');
 
