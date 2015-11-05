@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('css')
+  <link rel="stylesheet" type="text/css" href="  https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+@stop
+
 @section('content')
   <section>
     <div class="content">
