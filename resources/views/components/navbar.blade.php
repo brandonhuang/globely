@@ -1,5 +1,7 @@
 <div class="navbar">
-  <a class="logo" href="/">Globely</a>
+  <a href="/">
+    <img src="/images/globely_white_logo.png" class="logo" alt="Globley Logo">
+  </a>
   <nav>
     <a href="/how-it-works">How It Works</a>
     <a href="/style-guide">Style Guide</a>
