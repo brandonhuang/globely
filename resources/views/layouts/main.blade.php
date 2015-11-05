@@ -2,11 +2,13 @@
 
 <html>
 <head>
+  <meta charset="utf-8">
   <title>@yield('title')</title>
-  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <script src="https://use.typekit.net/lni5ddu.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
+  @yield('javascript')
 </head>
 <body>
   @include('components.navbar')
