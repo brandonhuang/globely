@@ -1,2 +1,11 @@
-CATCHING UP!!!
-learing laravel
+<div class="footer">
+ 
+</div>
+
+
+
+
+
+
+
+
