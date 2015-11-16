@@ -274,6 +274,61 @@ h3 {
   }
 }
 
+/* FOOTER */
+footer{
+  #logo{
+    text-align: center;
+  }
+
+  #language{
+    text-align: center;
+    color:#E7E7E7;
+  }
+  #languageIn{
+    margin-right: 30px;
+    font-family: 'Montserrat', sans-serif
+  }
+
+  .footer-box{
+    text-align: center;
+    float: left;
+    width: 33%;
+  }
+  #footer-bar{
+    text-align: center;
+    background-color: $teal;
+    height: 40px;
+    padding: 10px;
+  }
+  #box-wrapper{
+    display: block;
+    height: 200px;
+  }
+  #footer-bar-element{
+    color: white;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  #footer-separator{
+    color: white;
+  }
+  #footer-clickable{
+    color: #195A5A;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  #footer-label{
+    color:  $teal;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
+
+
 /* APPLY NOW */
 
 #apply-now {
@@ -444,6 +499,10 @@ img.infographic {
   .green {
   margin-left: -40px;
   }
+}
+
+.product-title {
+ font-family: 'Montserrat';
 }
 
 .fa-star, .fa-star-o:hover {

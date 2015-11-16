@@ -34,9 +34,9 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next)
     {
-        // if ($this->auth->check()) {
-        //     return redirect('/auth/login');
-        // }
+        if ($this->auth->check()) {
+            return redirect('/');
+        }
 
         return $next($request);
     }
