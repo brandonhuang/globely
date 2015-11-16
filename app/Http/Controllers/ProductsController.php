@@ -15,14 +15,18 @@ class ProductsController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::all();
+        $term = $request->input('query');
 
-        // return $products;
+        if(isset($term)) {
+            $products = Product::search($term)->get();
+        } else {
+            $products = Product::all();
+        }
 
         // Pass in articles data to view
-        return view('products.index')->with('products', $products);
+        return view('products.index')->with(['products' => $products, 'query' => $term]);
     }
 
     /**
@@ -43,15 +47,15 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $params= $request->input();
-        $product = new Product;
+        $params = $request->input();
 
-        $product->name=$params['name'];
-        $product->company=$params['company'];
-        $product->brand=$params['brand'];
-        $product->description=$params['description'];
-        $product->price=$params['price'];
-        $product->rating=$params['rating'];
+        $product = new Product;
+        $product->name = $params['name'];
+        $product->company = $params['company'];
+        $product->brand = $params['brand'];
+        $product->description = $params['description'];
+        $product->price = $params['price'];
+        $product->rating = $params['rating'];
 
         $product->save();
 
