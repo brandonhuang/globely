@@ -10,6 +10,16 @@ use App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {
+    /*
+    *
+    *Restricting Controller by User Type 
+    *
+    */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
