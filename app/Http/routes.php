@@ -13,8 +13,11 @@
 
 Route::resource('products', 'ProductsController');
 Route::resource('users', 'UsersController');
+<<<<<<< HEAD
 Route::get('users', ['middleware' => 'auth','uses' => 'UsersController@index']);
 Route::get('products', ['middleware' => 'auth','uses' => 'ProductsController@index']);
+=======
+>>>>>>> master
 
 Route::controller('/', 'StaticController');
 
@@ -33,3 +36,8 @@ Route::controllers([
 ]);
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master

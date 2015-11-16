@@ -21,6 +21,7 @@
     <a href="/style-guide">Style Guide</a>
     <a href="/products">Products</a>
     <a href="/users">Users</a>
+    <a href="http://localhost:8000/auth/login">Login</a>
     <a href="/apply" class="with-border">Apply</a>
   </nav>
 </div>
