@@ -19,6 +19,8 @@ class ProductsController extends Controller
     {
         $products = Product::all();
 
+        // return $products;
+
         // Pass in articles data to view
         return view('products.index')->with('products', $products);
     }
@@ -30,7 +32,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -41,9 +43,20 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $params= $request->input();
+        $product = new Product;
 
+        $product->name=$params['name'];
+        $product->company=$params['company'];
+        $product->brand=$params['brand'];
+        $product->description=$params['description'];
+        $product->price=$params['price'];
+        $product->rating=$params['rating'];
+
+        $product->save();
+
+        return redirect()->action('ProductsController@index');
+    }
     /**
      * Display the specified resource.
      *
