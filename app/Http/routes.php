@@ -13,6 +13,8 @@
 
 Route::resource('products', 'ProductsController');
 Route::resource('users', 'UsersController');
+Route::get('users', ['middleware' => 'auth','uses' => 'UsersController@index']);
+Route::get('products', ['middleware' => 'auth','uses' => 'ProductsController@index']);
 
 Route::controller('/', 'StaticController');
 
@@ -29,4 +31,5 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::controllers([
    'password' => 'Auth\PasswordController',
 ]);
+
 
