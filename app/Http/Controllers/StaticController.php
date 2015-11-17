@@ -23,9 +23,22 @@ class StaticController extends Controller
     {
         return view('static.how_it_works');
     }
-    public function getApply()
+    public function getApply(Request $request)
     {
-        return view('static.apply');
+        $type = $request->input('type');
+        $distributor = false;
+        $supplier = false;
+
+        switch ($type) {
+            case 'distributor':
+                $distributor = 'checked';
+                break;
+            case 'supplier':
+                $supplier = 'checked';
+                break;
+        }
+
+        return view('static.apply', ['distributor' => $distributor, 'supplier' => $supplier]);
     }
     public function getLogin(){
         return view('static.login');

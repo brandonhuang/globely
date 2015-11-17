@@ -88,8 +88,8 @@
   <section id="apply-now">
     <class class="content">
       <h1>Apply Now</h1>
-      <a class="button green" href="/apply?type=supplier">I am a distributor</a>
-      <a class="button green" href="/apply?type=distributor">I am a supplier</a>
+      <a class="button green" href="/apply?type=distributor">I am a distributor</a>
+      <a class="button green" href="/apply?type=supplier">I am a supplier</a>
     </class>
   </section>
 @stop
