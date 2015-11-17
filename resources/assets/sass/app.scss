@@ -464,7 +464,7 @@ img.infographic {
 
   .card {
     width: 30vw;
-    min-width: 300px;
+    min-width: 450px;
     margin: 0 auto;
     box-shadow: none;
     border-radius: 5px;
@@ -556,8 +556,16 @@ img.infographic {
   }
 }
 
+/* SEARCH PAGE */
 
-/* PRODUCT PAGE */
+#search {
+  .search-bar {
+    input[type=submit] {
+      display: inline-block;
+      top: 3px;
+    }
+  }
+}
 
 .card {
   border-radius: 4px;
@@ -599,3 +607,109 @@ img.infographic {
   background: yellow;
 }
 
+/* SELECT DROPDOWM ELEMENT */
+
+.wrapper-dropdown {
+  /* Size and position */
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 150px;
+  padding: 12.5px;
+
+  /* Styles */
+  background: #fff;
+  border-radius: 2px 0 0 2px;
+  border: 2px solid #DADADA;
+  cursor: pointer;
+  outline: none;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: $teal transparent;
+  }
+
+  .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 140%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border-radius: inherit;
+    border: 2px solid #DADADA;
+    font-weight: normal;
+    transition: all 100ms ease-in;
+    list-style: none;
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+
+    li {
+      a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: $teal;
+        border-bottom: 1px solid #e6e8ea;
+        transition: all 100ms ease-out;
+      }
+
+      &:first-of-type a {
+        border-radius: 2px 2px 0 0;
+      }
+
+      &:last-of-type a {
+        border-radius: 0 0 2px 2px;
+        border: none;
+      }
+
+      &:hover a {
+        background: #f3f8f8;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: 100%;
+      right: 15px;
+      border-width: 0 6px 6px 6px;
+      border-style: solid;
+      border-color: #fff transparent;  
+    }
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: 100%;
+      right: 13px;
+      border-width: 0 8px 8px 8px;
+      border-style: solid;
+      border-color: rgba(0,0,0,0.1) transparent;
+    }
+  }
+}
+
+.wrapper-dropdown.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
