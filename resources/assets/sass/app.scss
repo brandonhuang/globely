@@ -10,8 +10,8 @@ $lightgreen: #86c3a4;
 $green: #79BD9A;
 $darkgreen: #6caa8a;
 
+$lightteal: #629e9e;
 $teal: #3B8686;
-$lightteal: #4E9292;
 $darkteal: #357878;
 
 $lightblue: #235a79;
@@ -466,10 +466,22 @@ img.infographic {
     width: 30vw;
     min-width: 300px;
     margin: 0 auto;
-    box-sizing: border-box;
-    padding: 40px 50px;
-    border: 0;
     box-shadow: none;
+
+    .card-content {
+      box-sizing: border-box;
+      padding: 40px 50px;
+    }
+
+    .card-header {
+      background-color: $teal;
+      text-align: center;
+      padding: 30px;
+
+      img {
+        height: 60px;
+      }
+    }
   }
 
   h2 {
@@ -482,24 +494,24 @@ img.infographic {
     width: 100%;
 
     &:focus {
-      border-color: $green;
+      border-color: $lightteal;
     }
 
     &:valid {
-      border-color: $darkgreen;
+      border-color: $darkteal;
     }
 
     &[type=submit] {
       height: 50px;
       margin-top: 38px;
-      background-color: $green;
+      background-color: $teal;
 
       &:hover {
-        background-color: $lightgreen;
+        background-color: $lightteal;
       }
 
       &:active {
-        background-color: $darkgreen;
+        background-color: $darkteal;
       }
     }
   }
@@ -538,12 +550,12 @@ img.infographic {
     &:hover {
       transition-duration: 100ms;
       color: white;
-      background-color: $lightgreen;
+      background-color: $lightteal;
     }
   }
 
   input[type="radio"]:checked + .radio-label {
-    background-color: $darkgreen;
+    background-color: $teal;
     color: white;
   }
 }
