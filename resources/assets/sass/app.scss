@@ -467,6 +467,8 @@ img.infographic {
     min-width: 300px;
     margin: 0 auto;
     box-shadow: none;
+    border-radius: 5px;
+    overflow: hidden;
 
     .card-content {
       box-sizing: border-box;
