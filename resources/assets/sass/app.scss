@@ -599,3 +599,53 @@ img.infographic {
   background: yellow;
 }
 
+/* LOG IN */
+.login-window{
+
+  #login-logo{
+    text-align: center;
+    height: 80px;
+    width: 60%;
+    background-color: #3B8686;
+    padding-top: 20px;
+  }
+
+  #login-mainBox{
+    padding-top: 30px;
+    height: 340px;
+    width: 60%;
+    background-color: white;
+  }
+
+  #login-form-group{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+  #login-label {
+    text-align: left;
+    display: block;
+
+    padding-top: 20px;
+  }
+  #login-input {
+    text-align: left;
+    display: block;
+    font-size: 1.2em;
+    height: 50px;
+    width: 100%
+  }
+
+  #login-button {
+    margin-top: 10px;
+    background-color: #3B8686;
+  }
+
+  #login-forgot {
+    padding-top: 10px;
+    display: block;
+  }
+}
+

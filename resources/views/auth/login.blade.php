@@ -22,7 +22,35 @@
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
 						{!! csrf_field() !!}
 
-						<div class="form-group">
+
+						<div class="login-window">
+					      <div id="login-logo">
+					        <img src="/images/globely_logo.png" width="60px", height="60px">
+					      </div>
+					      <div id="login-mainBox">
+					        <div id="login-form-group">
+					          <label id="login-label"> E-Mail Address </label>
+					          <input id="login-input" type="text" class="email" name="email" value="{{ old('email') }}">
+					        </div>
+					        
+					        <div id="login-form-group">
+					          <label id="login-label"> Password </label>
+					          <input id="login-input" type="text" class="password" name="password">
+					        </div>
+
+					        <div id="login-form-group">
+					           <label id="login-label">
+					            <input type="checkbox" name="remember"> Remember Me
+					          </label>
+					        </div>
+					         
+					        <div id="login-form-group">
+					           <button id="login-button" type="submit"> LOG IN</button>
+					            <a id="login-forgot" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+					        </div>
+					      </div>
+
+						<!-- <div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
 							
 							<div class="col-md-6">
@@ -49,11 +77,11 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<!--<button type="submit" class="btn btn-primary">Login</button>-->
+								<button type="submit" class="btn btn-primary">Login</button>
 								<input type="submit" value="Login">
 								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
 							</div>
-						</div>
+						</div> -->
 					</form>
 				</div>
 			</div>
