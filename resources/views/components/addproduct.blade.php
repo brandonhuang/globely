@@ -52,7 +52,14 @@
 		<div class="col-md-6">
 			<input type="text" class="rating" name="rating">
 		</div>
-	</div>		
+	</div>	
+	<div class="form-group">
+		<label class="col-md-4 control-label">Image</label>
+		<div class="col-md-6">
+		<input type="file" name="file">
+        <input type="submit">
+		</div>
+	</div>			
 	<div class="form-group">
 		<div class="col-md-6 col-md-offset-4">
 			<input type="submit" value="Add Product">
