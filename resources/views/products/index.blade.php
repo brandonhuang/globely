@@ -30,11 +30,23 @@
     <div class="search-results">
       @foreach ($products as $product)
         <div class="product">
-          <div class="image" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg)"></div>
+          <div class="image" style="background-image: url(http://bhodbuzz.com/wp-content/uploads/2015/06/6924750-mountain-wallpaper.jpg)"></div>
           <div class="info">
-            <a class="company-image" href="#company-profile-link" style="background-image: url(https://d0.awsstatic.com/logos/customers/JJ-logo.png)"></a>
+            <a class="company-image" href="#company-profile-link" style="background-image: url(/images/globely_logo.png)"></a>
             <h3>{{ $product->name }}</h3>
             <h4>by {{ $product->brand }}</h4>
+            <div class="rating">
+              @for($i = 0; $i < 5; $i++)
+                @if(($product->rating - $i) >= 1)
+                  <i class="fa fa-star"></i>
+                @elseif(($product->rating - $i) > 0)
+                  <i class="fa fa-star-half-o"></i>
+                @else
+                  <i class="fa fa-star-o"></i>
+                @endif
+              @endfor
+              <p>{{ rand(1, 10) }} ratings</p>
+            </div>
           </div>
         </div> 
       @endforeach

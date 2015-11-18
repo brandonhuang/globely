@@ -10,6 +10,7 @@
   <script src="https://use.typekit.net/lni5ddu.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" type="text/css" href="/css/app.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   @yield('javascript')
   @yield('css')
 </head>

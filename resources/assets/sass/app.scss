@@ -6,6 +6,8 @@
 
 $salmon: #ff7777;
 
+$yellow: #ffb400;
+
 $lightgreen: #86c3a4;
 $green: #79BD9A;
 $darkgreen: #6caa8a;
@@ -595,7 +597,7 @@ img.infographic {
   }
 
   p {
-    margin: 1em 0;
+    margin: 1em 5px;
   }
 
   .search-results {
@@ -608,7 +610,8 @@ img.infographic {
       margin: 10px;
       height: 400px;
       width: 380px;
-      border-radius: 5px;
+      border-radius: 4px;
+      overflow: hidden;
 
       .image {
         height: 80%;
@@ -619,8 +622,11 @@ img.infographic {
       }
 
       .info {
+        box-sizing: border-box;
         height: 20%;
         position: relative;
+        background-color: white;
+        padding: 5px 10px;
 
         .company-image {
           position: absolute;
@@ -631,21 +637,33 @@ img.infographic {
           border-radius: 100%;
           right: 10px;
           top: -30px;
-          border: 2px solid white;
+          border: 3px solid white;
           z-index: 1;
         }
 
         h3 {
           position: relative;
           margin: 0;
-          padding: 5px 0 0 10px;
         }
 
         h4 {
           color: #BBB;
           position: relative;
           margin: 0;
-          padding: 0 0 0 10px;
+          font-size: 0.9em;
+        }
+
+        .rating {
+          position: relative;
+          margin-top: 7px;
+          color: $yellow;
+
+          p {
+            display: inline-block;
+            margin: 0;
+            font-size: 0.9em;
+            margin-left: 5px;
+          }
         }
       }
     }
