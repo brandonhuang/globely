@@ -5,10 +5,10 @@
     </a>
     <nav>
       <a href="/how-it-works">How It Works</a>
-      <a href="/products">Products</a>
       <a href="/products/create">Add Products</a>
       <a href="/users">Users</a>
-      <a href="/auth/logout" class="with-border">Logout</a>
+      <a href="/auth/logout">Logout</a>
+      <a href="/products" class="with-border">Browse</a>
     </nav>
   </div>
 @else 

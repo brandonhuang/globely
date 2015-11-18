@@ -452,8 +452,28 @@ img.infographic {
 /* APPLY PAGE */
 
 .form {
+  box-sizing: border-box;
+  min-height: calc(100vh - 50px);
   padding-top: 60px;
   padding-bottom: 60px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/train_background.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: brightness(0.75);
+    z-index: 0;
+  }
+
     
   .error {
     color: $salmon;
@@ -467,6 +487,8 @@ img.infographic {
     border-radius: 5px;
     overflow: hidden;
     background-color: white;
+    position: relative;
+    z-index: 1;
 
     .card-content {
       box-sizing: border-box;
