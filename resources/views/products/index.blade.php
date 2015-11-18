@@ -32,7 +32,7 @@
         <div class="product">
           <div class="image" style="background-image: url(http://bhodbuzz.com/wp-content/uploads/2015/06/6924750-mountain-wallpaper.jpg)"></div>
           <div class="info">
-            <a class="company-image" href="#company-profile-link" style="background-image: url(/images/globely_logo.png)"></a>
+            <a class="company-image" href="#company-profile-link" style="background-image: url(/images/globely_logo.png)" title="{{ $product->company }}"></a>
             <h3>{{ $product->name }}</h3>
             <h4>by {{ $product->brand }}</h4>
             <div class="rating">

@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('javascript')
+	<script src="/js/ball_physics.js"></script>
+@stop
+
 @section('content')
 	<section class="form">
 		<div>
@@ -12,7 +16,7 @@
 					</div>
 				@endif
 				<div class="card-header">
-					<img src="/images/globely_logo.png" alt="Globely Icon">
+					<img id="globely-logo" src="/images/globely_logo.png" alt="Globely Icon">
 				</div>
 				<div class="card-content">
 					<form method="POST" action="/auth/login">

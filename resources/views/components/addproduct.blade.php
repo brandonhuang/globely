@@ -1,46 +1,32 @@
+<section class="form">
+	<div class="card">
+		<div class="card-header">
+			<img src="/images/globely_logo.png" alt="Globely Icon">
+		</div>
+		<div class="card-content">
+			<form method="POST" action="/products">
+				{!! csrf_field() !!}
+				<label for="name">Product Name</label>
+				<input id="name" name="name" type="text" required>
+				<label for="brand">Product Brand</label>
+				<input id="brand" name="brand" type="text" required>
+				<label for="company">Company</label>
+				<input id="company" name="company" type="text" required>
+				<label for="price">Price</label>
+				<input id="price" name="price" type="number" required>
+				<label for="description">Description</label>
+				<input id="description" name="description" type="text" required>
+				<label for="rating">Rating</label>
+				<input id="rating" name="rating" type="number" max="5" min="0" required>
+				<input class="teal" type="submit" value="Add Product">
+			</form>
+		</div>
+	</div>
+</section>
+
+
 <form class="form-horizontal" role="form" method="POST" action="/products">
 						{!! csrf_field() !!}
-
-	<div class="form-group">
-		<label class="col-md-4 control-label">Name</label>
-		
-		<div class="col-md-6">
-			<input type="text" class="name" name="name">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-md-4 control-label">Company</label>
-		
-		<div class="col-md-6">
-			<input type="text" class="company" name="company">
-		</div>
-	</div>
-	<!-- <div class="form-group">
-		<label class="col-md-4 control-label">Category</label>
-		<div class="col-md-6">
-			<input type="text" class="password" name="category">
-		</div>
-	</div>	 -->
-
-	<div class="form-group">
-		<label class="col-md-4 control-label">Price</label>
-		<div class="col-md-6">
-			<input type="text" class="price" name="price">
-		</div>
-	</div>	
-
-	<!-- <div class="form-group">
-		<label class="col-md-4 control-label">Image</label>
-		<div class="col-md-6">
-			<input type="text" class="password" name="password">
-		</div>
-	</div> -->
-	<div class="form-group">
-		<label class="col-md-4 control-label">Brand</label>
-		<div class="col-md-6">
-			<input type="text" class="brand" name="brand">
-		</div>
-	</div>
 	<div class="form-group">
 		<label class="col-md-4 control-label">Description</label>
 		<div class="col-md-6">
