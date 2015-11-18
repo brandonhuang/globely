@@ -18,15 +18,16 @@ class ProductsController extends Controller
     public function index(Request $request)
     {
         $term = $request->input('query');
+        $prop = $request->input('prop');
 
         if(isset($term)) {
-            $products = Product::search($term)->get();
+            $products = Product::search($prop, $term)->get();
         } else {
             $products = Product::all();
         }
 
         // Pass in articles data to view
-        return view('products.index')->with(['products' => $products, 'query' => $term]);
+        return view('products.index', ['products' => $products, 'query' => $term, 'prop' => $prop]);
     }
 
     /**

@@ -20,6 +20,7 @@ DropDown.prototype = {
       obj.val = opt.text();
       obj.index = opt.index();
       obj.placeholder.text(obj.val);
+      $('#dd').addClass('valid');
     });
   },
   getValue : function() {
@@ -36,7 +37,7 @@ $(function() {
 
   $(document).click(function() {
     // all dropdowns
-    $('.wrapper-dropdown-3').removeClass('active');
+    $('.wrapper-dropdown').removeClass('active');
   });
 
 });
