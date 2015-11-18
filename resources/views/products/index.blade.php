@@ -1,42 +1,55 @@
 @extends('layouts.main')
 
-@section('css')
-  <link rel="stylesheet" type="text/css" href="  https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+@section('javascript')
+  <script src="/js/dropdown.js"></script>
+  <script src="/js/form_submit.js"></script>
 @stop
 
 @section('content')
-  <section>
-    <form method="GET" action="/products">
-      <input type="text" name="query" placeholder="Search" value="{{ $query }}" required>
-      <input type="submit" value="Search">
-    </form>
-  </section>
-  <section>
+  <section id="search">
     <div class="content">
-      <h1>Products</h1>
-    </div>
-  </section>
-  <section class="container-fluid">
-    @foreach ($products as $product)
-      <div class="row">
-        <div class="card col-md-4 col-md-offset-1"> 
-          <div class="header text-center">
-              <h2 class="title">{{ $product->name }}</h2>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <img class="product-image" src="http://www.shmula.com/wp-content/uploads/2007/02/interface-is-product-ux-ui.jpg">
-            </div>
-            <div class="col-md-6 product-info">
-              <p class="product-brand">by {{ $product->brand }}</p>
-              <p class="product-desc">{{ $product->description }}</p>
-              <p class="product-price">{{ $product->price }} <span>Rating: {{ $product->rating }}/5</span></p>
-              <p class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
-              <button class="green">Buy Now!</button>
-            </div>
-          </div>
+      <h1>Product Search</h1>
+      <form method="GET" action="/products" class="search-bar">
+        <div id="dd" class="wrapper-dropdown {{ isset($prop) ? 'filled' : '' }}" tabindex="1">
+          <span>{{ isset($prop) ? $prop : 'Search By' }}</span>
+          <ul class="dropdown">
+            <li><a href="#">Any</a></li>
+            <li><a href="#">Product Name</a></li>
+            <li><a href="#">Brand</a></li>
+            <li><a href="#">Supplier</a></li>
+            <li><a href="#">Description</a></li>
+          </ul>
         </div>
-      </div>    
-    @endforeach
+        <input type="hidden" id="prop" name="prop">
+        <input type="text" name="query" placeholder="Search" value="{{ $query }}" required>
+        <input type="submit" class="teal" value="Search">
+        <div class="clear"></div>
+        <p>Your search returned {{ sizeof($products) }} result(s).</p>
+      </form>
+    </div>
+    <div class="search-results">
+      @foreach ($products as $product)
+        <div class="product">
+          <div class="image" style="background-image: url(http://bhodbuzz.com/wp-content/uploads/2015/06/6924750-mountain-wallpaper.jpg)"></div>
+          <div class="info">
+            <a class="company-image" href="#company-profile-link" style="background-image: url(/images/globely_logo.png)"></a>
+            <h3>{{ $product->name }}</h3>
+            <h4>by {{ $product->brand }}</h4>
+            <div class="rating">
+              @for($i = 0; $i < 5; $i++)
+                @if(($product->rating - $i) >= 1)
+                  <i class="fa fa-star"></i>
+                @elseif(($product->rating - $i) > 0)
+                  <i class="fa fa-star-half-o"></i>
+                @else
+                  <i class="fa fa-star-o"></i>
+                @endif
+              @endfor
+              <p>{{ rand(1, 10) }} ratings</p>
+            </div>
+          </div>
+        </div> 
+      @endforeach
+    </div>
   </section>
 @stop

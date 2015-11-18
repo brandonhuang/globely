@@ -21,7 +21,7 @@
 						<input id="email" name="email" type="email" required value="{{ old('email') }}">
 						<label id="password">Password</label>
 	          <input id="password" type="password" name="password" required>
-						<input class="teal" type="submit" value="Apply">
+						<input class="teal" type="submit" value="Login">
 					</form>
 				</div>
 			</div>
