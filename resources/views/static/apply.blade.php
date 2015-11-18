@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-	<section id="apply">
+	<section class="form">
 		<div class="card">
 			<div class="card-header">
 				<img src="/images/globely_logo.png" alt="Globely Icon">
