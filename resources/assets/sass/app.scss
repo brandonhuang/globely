@@ -459,8 +459,13 @@ img.infographic {
 
 /* APPLY PAGE */
 
-#apply {
+.form {
   padding-top: 60px;
+  padding-bottom: 60px;
+    
+  .error {
+    color: $salmon;
+  }
 
   .card {
     width: 30vw;

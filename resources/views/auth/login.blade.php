@@ -1,91 +1,30 @@
 @extends('layouts.main')
-@extends('app')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+	<section class="form">
+		<div>
+			<div class="card">
+				@if (count($errors) > 0)
+					<div class="error">
+						@foreach ($errors->all() as $error)
+							<p>{{ $error }}</p>
+						@endforeach
+					</div>
+				@endif
+				<div class="card-header">
+					<img src="/images/globely_logo.png" alt="Globely Icon">
+				</div>
+				<div class="card-content">
+					<form method="POST" action="/auth/login">
 						{!! csrf_field() !!}
-
-
-						<div class="login-window">
-					      <div id="login-logo">
-					        <img src="/images/globely_logo.png" width="60px", height="60px">
-					      </div>
-					      <div id="login-mainBox">
-					        <div id="login-form-group">
-					          <label id="login-label"> E-Mail Address </label>
-					          <input id="login-input" type="text" class="email" name="email" value="{{ old('email') }}">
-					        </div>
-					        
-					        <div id="login-form-group">
-					          <label id="login-label"> Password </label>
-					          <input id="login-input" type="text" class="password" name="password">
-					        </div>
-
-					        <div id="login-form-group">
-					           <label id="login-label">
-					            <input type="checkbox" name="remember"> Remember Me
-					          </label>
-					        </div>
-					         
-					        <div id="login-form-group">
-					           <button id="login-button" type="submit"> LOG IN</button>
-					            <a id="login-forgot" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-					        </div>
-					      </div>
-
-						<!-- <div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							
-							<div class="col-md-6">
-								<input type="text" class="email" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="text" class="password" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-								<input type="submit" value="Login">
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-							</div>
-						</div> -->
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" required value="{{ old('email') }}">
+						<label id="password">Password</label>
+	          <input id="password" type="password" name="password" required>
+						<input class="teal" type="submit" value="Apply">
 					</form>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-@endsection
+	  </div>
+	</section>
+@stop
