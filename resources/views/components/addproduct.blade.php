@@ -18,45 +18,10 @@
 				<input id="description" name="description" type="text" required>
 				<label for="rating">Rating</label>
 				<input id="rating" name="rating" type="number" max="5" min="0" required>
+				<label for="image">image</label>
+				<input id="image" name="image" type="file" required>
 				<input class="teal" type="submit" value="Add Product">
 			</form>
 		</div>
 	</div>
 </section>
-
-
-<form class="form-horizontal" role="form" method="POST" action="/products">
-						{!! csrf_field() !!}
-	<div class="form-group">
-		<label class="col-md-4 control-label">Description</label>
-		<div class="col-md-6">
-			<input type="text" class="description" name="description">
-		</div>
-	</div>		
-	<div class="form-group">
-		<label class="col-md-4 control-label">Rating</label>
-		<div class="col-md-6">
-			<input type="text" class="rating" name="rating">
-		</div>
-	</div>	
-	<div class="form-group">
-		<label class="col-md-4 control-label">Image</label>
-		<div class="col-md-6">
-		<input type="file" name="file">
-        <input type="submit">
-		</div>
-	</div>			
-	<div class="form-group">
-		<div class="col-md-6 col-md-offset-4">
-			<input type="submit" value="Add Product">
-		</div>
-	</div>
-</form>
-
-<!--Category- dropdown of all categories
-	Name- textfield
-	Price- textfield
-	image- upload image from local computer
-	brand- textfield
-	description- textbox
-	rating- star image, out of 5-->
