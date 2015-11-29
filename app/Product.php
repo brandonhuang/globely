@@ -16,7 +16,7 @@ class Product extends Model
                 $prop = "brand";
                 break;
             case "Supplier":
-                $prop = "company";
+                $prop = "company_name";
                 break;
             case "Description":
                 $prop = "description";
@@ -28,17 +28,18 @@ class Product extends Model
                 $prop = NULL;
         }
 
-        $this->leftJoin('posts', 'product.company_id', '=', 'user.id');
-
         //If a property is passed in, search by that property, else search all props
         if(isset($prop)) {
-          return $query->where($prop, 'like', $term);
+
+          return $query->Join('users', 'products.company_id', '=', 'users.id')
+                       ->where($prop, 'like', "%$term%");
         }
         else {
-          return $query->where('name', 'like', $term)
-                       ->orWhere('brand', 'like', $term)
-                       ->orWhere('company', 'like', $term)
-                       ->orWhere('description', 'like', $term);
+          return $query->Join('users', 'products.company_id', '=', 'users.id')
+                       ->where('name', 'like', "%$term%")
+                       ->orWhere('brand', 'like', "%$term%")
+                       ->orWhere('company', 'like', "%$term%")
+                       ->orWhere('description', 'like', "%$term%");
         }
     }
 
