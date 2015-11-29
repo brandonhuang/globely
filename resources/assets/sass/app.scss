@@ -631,76 +631,88 @@ img.infographic {
   p {
     margin: 1em 5px;
   }
+}
 
-  .search-results {
-    @extend .content;
-    display: flex;
-    flex-wrap: wrap;
+.search-results {
+  @extend .content;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    .product {
-      margin: 10px;
-      height: 400px;
-      width: 380px;
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      flex-grow: 0;
+.product {
+  position: relative;
+  margin: 10px;
+  height: 400px;
+  width: 380px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-grow: 0;
 
-      .image {
-        height: 80%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-      }
+  .image {
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
 
-      .info {
-        box-sizing: border-box;
-        height: 20%;
-        position: relative;
-        background-color: white;
-        padding: 5px 10px;
+  .price {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 8px;
+    font-size: 1.4em;
+    color: white;
+    border-radius: 0 3px 3px 0;
+  }
 
-        .company-image {
-          position: absolute;
-          height: 60px;
-          width: 60px;
-          background-size: cover;
-          background-position: center;
-          border-radius: 100%;
-          right: 10px;
-          top: -30px;
-          border: 3px solid white;
-          z-index: 1;
-        }
+  .info {
+    box-sizing: border-box;
+    height: 20%;
+    position: relative;
+    background-color: white;
+    padding: 5px 10px;
 
-        h3 {
-          position: relative;
-          margin: 0;
-        }
-
-        h4 {
-          color: #BBB;
-          position: relative;
-          margin: 0;
-          font-size: 0.9em;
-        }
-
-        .rating {
-          position: relative;
-          margin-top: 7px;
-          color: $yellow;
-
-          p {
-            display: inline-block;
-            margin: 0;
-            font-size: 0.9em;
-            margin-left: 5px;
-          }
-        }
-      }
+    .company-image {
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 100%;
+      right: 10px;
+      top: -30px;
+      border: 3px solid white;
+      z-index: 1;
     }
+
+    h3 {
+      position: relative;
+      margin: 0;
+    }
+
+    h4 {
+      color: #BBB;
+      position: relative;
+      margin: 0;
+      font-size: 0.9em;
+    }
+  }
+}
+.rating {
+  position: relative;
+  margin-top: 7px;
+  color: $yellow;
+
+  p {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.9em;
+    margin-left: 5px;
   }
 }
 
@@ -821,4 +833,110 @@ img.infographic {
     opacity: 1;
     pointer-events: auto;
 }
+
+/* PRODUCT DETAILS */
+
+.details {
+  h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    display: inline-block;
+  }
+
+  h4 {
+    display: inline-block;
+    margin: 0;
+    color: #BBB;
+    margin-left: 5px;
+  }
+
+  .rating {
+    margin: 0;
+  }
+
+  .product-header {
+    width: 100%;
+  }
+
+  .image {
+    height: 400px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .info {
+    position: relative;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 400px;
+    background-color: white;
+
+    .buy {
+      position: absolute;
+      top: 345px;
+    }
+  }
+}
+
+.supplier {
+  .company-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    float: left;
+  }
+
+  .supplier-info {
+    float: left;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      color: #BBB;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

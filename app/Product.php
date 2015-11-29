@@ -16,7 +16,12 @@ class Product extends Model
                 $prop = "brand";
                 break;
             case "Supplier":
-                $prop = "company_name";
+                $term = User::where('company_name', 'like', "%$term%")->get()->transform(function($item, $key) {
+                    return $item->id;
+                });
+
+                return $query->whereIn('company_id', $term);
+
                 break;
             case "Description":
                 $prop = "description";
@@ -30,15 +35,14 @@ class Product extends Model
 
         //If a property is passed in, search by that property, else search all props
         if(isset($prop)) {
-
-          return $query->Join('users', 'products.company_id', '=', 'users.id')
+            return $query
                        ->where($prop, 'like', "%$term%");
         }
         else {
-          return $query->Join('users', 'products.company_id', '=', 'users.id')
+            return $query
                        ->where('name', 'like', "%$term%")
                        ->orWhere('brand', 'like', "%$term%")
-                       ->orWhere('company', 'like', "%$term%")
+                       ->orWhere('company_id', 'like', "%$term%")
                        ->orWhere('description', 'like', "%$term%");
         }
     }

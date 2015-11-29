@@ -17,10 +17,14 @@
 					</div>
 					<label for="email">Email</label>
 					<input id="email" name="email" type="email" required>
+					<label for="password">Password</label>
+					<input id="password" name="password" type="password" required>	
 					<label for="company-name">Company Name</label>
 					<input id="company-name" name="company-name" type="text" required>
-					<label for="password">Password</label>
-					<input id="password" name="password" type="password" required>			
+					<label for="company-name">Country</label>
+					<input id="company-name" name="country" type="text" required>
+					<label for="company-name">City</label>
+					<input id="company-name" name="city" type="text" required>	
 					<label for="website">Website</label>
 					<input id="website" name="website" type="text" required>
 					<label for="tax-id">Tax ID</label>

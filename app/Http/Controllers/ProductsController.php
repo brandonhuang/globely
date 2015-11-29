@@ -75,7 +75,12 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        dd(Product::find($id)->user);
+        $product = Product::find($id);
+
+        // Find similar products, limit to 3 results
+        $simProducts = Product::search('Any', $product->name)->take(3)->get();
+
+        return view('products.show', ['product' => $product, 'simProducts' => $simProducts]);
     }
 
     /**
