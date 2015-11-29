@@ -3,3 +3,5 @@ node_modules/
 vendor/
 public/css/
 storage/database.sqlite
+public/product_images/
+public/user_images/
