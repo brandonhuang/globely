@@ -28,15 +28,22 @@ class Product extends Model
                 $prop = NULL;
         }
 
+        $this->leftJoin('posts', 'product.company_id', '=', 'user.id');
+
         //If a property is passed in, search by that property, else search all props
         if(isset($prop)) {
-          return $query->where($prop, $term);
+          return $query->where($prop, 'like', $term);
         }
         else {
-          return $query->where('name', $term)
-                       ->orWhere('brand', $term)
-                       ->orWhere('company', $term)
-                       ->orWhere('description', $term);
+          return $query->where('name', 'like', $term)
+                       ->orWhere('brand', 'like', $term)
+                       ->orWhere('company', 'like', $term)
+                       ->orWhere('description', 'like', $term);
         }
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'company_id');
     }
 }

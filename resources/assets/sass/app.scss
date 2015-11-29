@@ -297,13 +297,16 @@ h4 {
 /* FOOTER */
 
 footer{
-  #logo{
+  box-sizing: border-box;
+  padding: 10px 0 0 0;
+
+  .logo{
     text-align: center;
   }
 
   #language{
     text-align: center;
-    color:#E7E7E7;
+    color: #AAA;
   }
   #languageIn{
     margin-right: 30px;
@@ -327,9 +330,8 @@ footer{
   }
   #footer-bar-element{
     color: white;
-    margin-right: 30px;
-    margin-left: 30px;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 30px;
   }
   #footer-separator{
     color: white;
@@ -339,7 +341,7 @@ footer{
     font-family: 'Montserrat', sans-serif;
 
   }
-  #footer-label{
+  #footer-label {
     color:  $teal;
     font-weight: bold;
     font-size: 1.2em;
@@ -649,6 +651,7 @@ img.infographic {
         width: 100%;
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
         overflow: hidden;
       }
 

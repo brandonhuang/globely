@@ -7,7 +7,7 @@
 				<img src="/images/globely_logo.png" alt="Globely Icon">
 			</div>
 			<div class="card-content">
-				<form method="POST" action="/users">
+				<form method="POST" action="/users" enctype="multipart/form-data">
 					{!! csrf_field() !!}
 					<div class="radio-button">
 						<input id="distributor" class="hidden" type="radio" name="user-type" value="distributor" {{ $distributor }} required>
@@ -24,7 +24,8 @@
 					<label for="website">Website</label>
 					<input id="website" name="website" type="text" required>
 					<label for="tax-id">Tax ID</label>
-					<input id="tax-id" name="tax-id" type="text" required>	
+					<input id="tax-id" name="tax-id" type="text" required>
+					<input id="image" name="image" type="file" accept="image/png" required>
 					<input class="teal" type="submit" value="Apply">
 				</form>
 			</div>

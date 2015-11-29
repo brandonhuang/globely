@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 use App\Product;
 use App\Http\Requests;
@@ -48,17 +49,21 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+        $company_id = Auth::user()->id;
         $params = $request->input();
 
         $product = new Product;
         $product->name = $params['name'];
-        $product->company = $params['company'];
+        $product->company_id = $company_id;
         $product->brand = $params['brand'];
         $product->description = $params['description'];
         $product->price = $params['price'];
         $product->rating = $params['rating'];
 
         $product->save();
+
+        $imageName = $product->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move('../public/product_images/', $imageName);
 
         return redirect()->action('ProductsController@index');
     }
@@ -70,7 +75,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        dd(Product::find($id)->user);
     }
 
     /**

@@ -43,6 +43,9 @@ class UsersController extends Controller
 
         $user->save();
 
+        $imageName = $user->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move('../public/user_images/', $imageName);
+
         return redirect()->action('UsersController@index');
     }
 

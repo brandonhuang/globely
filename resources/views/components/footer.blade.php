@@ -1,10 +1,10 @@
 <footer>
-	<div id="logo">
+<!-- 	<div class="logo">
 		<img src="/images/globely_logo.png" width="50px", height="50px">
 	</div>
 
 	<div id="language">
-		<h2> <span id="languageIn">American</span>  <span id="languageIn">Chinese</span></h2>
+		<h2>e<span id="languageIn">American</span>  <span id="languageIn">Chinese</span></h2>
 
 	</div>
 	<div id = "box-wrapper">
@@ -25,11 +25,16 @@
 			<p id="footer-label">Connect</p>
 			<p id="footer-clickable">Contact Us</p>
 			<p id="footer-clickable">Write a Review</p>
-
 		</div>
-	</div>
+	</div> -->
 
 	<div id="footer-bar">
-		<p><span id="footer-bar-element" href="/">Legal</span><span id="footer-separator">|</span><span id="footer-bar-element" href="/">Privacy</span><span id="footer-separator">|</span><span id="footer-bar-element" href="/">Security</span><span id="footer-separator">|</span><span id="footer-bar-element" href="/">2015 GLOBELY.com</span></p>
+		<span id="footer-bar-element" href="/">Legal</span>
+		<span id="footer-separator">|</span>
+		<span id="footer-bar-element" href="/">Privacy</span>
+		<span id="footer-separator">|</span>
+		<span id="footer-bar-element" href="/">Security</span>
+		<span id="footer-separator">|</span>
+		<span id="footer-bar-element" href="/">2015 GLOBELY.com</span>
 	</div>
 </footer>
