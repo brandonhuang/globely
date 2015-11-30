@@ -837,6 +837,22 @@ img.infographic {
 /* PRODUCT DETAILS */
 
 .details {
+  .content {
+    position: relative;
+
+    .price {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      font-size: 1.4em;
+      color: white;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
   h1 {
     font-size: 2em;
     margin: 0 0 10px 0;
@@ -850,17 +866,23 @@ img.infographic {
     margin-left: 5px;
   }
 
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   .rating {
     margin: 0;
   }
 
   .product-header {
+    margin: 10px 0;
     width: 100%;
   }
 
   .image {
-    height: 400px;
-    width: 50%;
+    height: 500px;
+    width: 60%;
     float: left;
     box-sizing: border-box;
     padding: 20px;
@@ -874,15 +896,15 @@ img.infographic {
   .info {
     position: relative;
     float: left;
-    width: 50%;
+    width: 40%;
     box-sizing: border-box;
     padding: 20px;
-    height: 400px;
+    height: 500px;
     background-color: white;
 
     .buy {
       position: absolute;
-      top: 345px;
+      top: 435px;
     }
   }
 }
@@ -910,6 +932,8 @@ img.infographic {
 
     p {
       margin: 0;
+      margin-top: 5px;
+      font-size: 18px;
       color: #BBB;
     }
   }

@@ -39,7 +39,7 @@ class UsersController extends Controller
         $user->password = bcrypt($params['password']);
         $user->company_name = $params['company-name'];
         $user->country = $params['country'];
-        $user->city = $parrams['city'];
+        $user->city = $params['city'];
         $user->website = $params['website'];
         $user->tax_id = $params['tax-id'];
 

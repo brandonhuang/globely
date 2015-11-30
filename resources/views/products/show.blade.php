@@ -4,6 +4,7 @@
 <section class="details">
   <div class="content">
     <div class="image" style="background-image: url(/product_images/{{ $product->id }}.png)"></div>
+    <div class="price">$ {{ number_format($product->price, 2) }}</div>
     <div class="info">
       <div class="product-header">
         <h1>{{ $product->name }}</h1>
