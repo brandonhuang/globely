@@ -92,6 +92,8 @@ class ProductsController extends Controller
     public function edit($id)
     {
         //
+        $product = Product::find($id);
+        return view('products.edit', ['product' => $product]);
     }
 
     /**
@@ -104,6 +106,7 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
