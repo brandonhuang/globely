@@ -1,4 +1,4 @@
-@if(Auth::check()) 
+@if(Auth::user()->type == 'distributor')
   <div class="navbar">
     <a href="/">
       <img src="/images/globely_white_logo.png" class="logo" alt="Globley Logo">
@@ -11,7 +11,20 @@
       <a href="/products" class="with-border">Browse</a>
     </nav>
   </div>
-@else 
+@elseif(Auth::user()->type == 'supplier')
+  <div class="navbar">
+    <a href="/">
+      <img src="/images/globely_white_logo.png" class="logo" alt="Globley Logo">
+    </a>
+    <nav>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/products/create">Add Products</a>
+      <a href="/users">Users</a>
+      <a href="/auth/logout">Logout</a>
+      <a href="/products" class="with-border">Browse</a>
+    </nav>
+  </div>
+@else
   <div class="navbar">
     <a href="/">
       <img src="/images/globely_white_logo.png" class="logo" alt="Globley Logo">

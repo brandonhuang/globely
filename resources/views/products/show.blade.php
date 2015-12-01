@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', $product->name . ' - Globely')
+
 @section('content')
 <section class="details">
   <div class="content">
@@ -29,7 +31,7 @@
 </section>
 <section class="supplier">
   <div class="content">
-    <a class="company-image" href="#company-profile-link" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
+    <a class="company-image" href="/users/{{ $product->user->id }}" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
     <div class="supplier-info">
       <h2>Posted by {{ $product->user->company_name }}</h2>
       <p>{{ $product->user->city }}, {{ $product->user->country }}</p>
@@ -38,7 +40,7 @@
 </section>
 <section class="similar-products">
   <div class="content">
-    <h1>Similar Products</h1>
+    <h2>Similar Products</h2>
     <div class="search-results">
       @foreach ($simProducts as $simProduct)
         @if ($simProduct->id != $product->id)
@@ -47,7 +49,7 @@
               <div class="image" style="background-image: url(/product_images/{{ $simProduct->id }}.png)"></div>
               <div class="price">$ {{ number_format($simProduct->price, 2) }}</div>
               <div class="info">
-                <a class="company-image" href="#company-profile-link" style="background-image: url(/user_images/{{ $simProduct->user->id }}.png)" title="{{ $simProduct->company }}"></a>
+                <a class="company-image" href="/users/{{ $simProduct->user->id }}" style="background-image: url(/user_images/{{ $simProduct->user->id }}.png)" title="{{ $simProduct->company }}"></a>
                 <h3>{{ $simProduct->name }}</h3>
                 <h4>by {{ $simProduct->brand }}</h4>
                 <div class="rating">

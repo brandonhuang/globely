@@ -36,7 +36,7 @@
             <div class="image" style="background-image: url(/product_images/{{ $product->id }}.png)"></div>
             <div class="price">$ {{ number_format($product->price, 2) }}</div>
             <div class="info">
-              <a class="company-image" href="#company-profile-link" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
+              <a class="company-image" href="/users/{{ $product->user->id }}" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
               <h3>{{ $product->name }}</h3>
               <h4>by {{ $product->brand }}</h4>
               <div class="rating">
