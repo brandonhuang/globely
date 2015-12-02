@@ -962,7 +962,6 @@ img.infographic {
 /* COMPANY PROFILE PAGE */
 .company-card-wrapper {
   width: 250px;
-  height: 100px;
   float: left;
 }
 
@@ -1040,6 +1039,34 @@ img.infographic {
 
   .product {
     width: calc(50% - 20px);
+
+    .edit {
+      position: absolute;
+      width: 100px;
+      right: 20px;
+    }
+  }
+
+  .add-product {
+    @extend .product;
+    background-color: white;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    .image {
+      font-size: 3em;
+      color: #eee;
+      text-align: center;
+      position: relative;
+      top: 150px;
+    }
+
+    .info {
+      background-color: #eee;
+      width: 100%;
+    }
   }
 }
 

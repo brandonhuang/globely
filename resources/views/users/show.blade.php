@@ -21,7 +21,7 @@
         <a href="https://{{ $user->website }}"><h3><i class="fa fa-globe"></i>{{ $user->website }}</h3></a>
         <a href="mailto://{{ $user->email }}"><h3><i class="fa fa-envelope"></i>{{ $user->email }}</h3></a>
         @if($currentUser->id == $user->id)
-          <a href="/users/{{ $user->id }}/edit" class="edit teal">Edit</a>
+          <a href="/users/{{ $user->id }}/edit" class="edit teal">Account</a>
         @endif
       </div>
     </div>
@@ -33,7 +33,11 @@
               <div class="image" style="background-image: url(/product_images/{{ $product->id }}.png)"></div>
               <div class="price">$ {{ number_format($product->price, 2) }}</div>
               <div class="info">
-                <a class="company-image" href="/users/{{ $product->user->id }}" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
+                @if($currentUser->id == $user->id)
+                  <a href="/products/{{ $product->id }}/edit" class="edit teal">Edit</a>
+                @else
+                  <a class="company-image" href="/users/{{ $product->user->id }}" style="background-image: url(/user_images/{{ $product->user->id }}.png)" title="{{ $product->company }}"></a>
+                @endif
                 <h3>{{ $product->name }}</h3>
                 <h4>by {{ $product->brand }}</h4>
                 <div class="rating">
@@ -52,6 +56,17 @@
             </a>
           </div>
         @endforeach
+        @if($currentUser->id == $user->id)
+          <div class="add-product">
+            <a href="/products/create">
+              <div class="image">
+                <i class="fa fa-plus"></i>
+              </div>
+              <div class="info">
+              </div>
+            </a>
+          </div>
+        @endif
       </div>
     </div>
   </div>
