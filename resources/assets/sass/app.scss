@@ -1016,15 +1016,21 @@ img.infographic {
 }
 
 .profile {
-  .company-card {
-    position: fixed;
-    transform: translateY(-45%);
-  }
 
   .h2 {
     margin: 0 10px 25px 10px;
   }
+  
+  .edit {
+    @extend .button;
+    color: white;
+    margin: 20px 0 0 0;
+    width: 100%;
 
+    &:hover {
+      color: white;
+    }
+  }
 
   .company-products {
     float: left;

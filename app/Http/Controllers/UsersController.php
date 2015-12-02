@@ -74,7 +74,6 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        return dd(Auth::user());
     }
 
     /**

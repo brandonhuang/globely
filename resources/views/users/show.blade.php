@@ -20,10 +20,12 @@
         <h3>{{ $user->city }}, {{ $user->country }}</h3>
         <a href="https://{{ $user->website }}"><h3><i class="fa fa-globe"></i>{{ $user->website }}</h3></a>
         <a href="mailto://{{ $user->email }}"><h3><i class="fa fa-envelope"></i>{{ $user->email }}</h3></a>
+        @if($currentUser->id == $user->id)
+          <a href="/users/{{ $user->id }}/edit" class="edit teal">Edit</a>
+        @endif
       </div>
     </div>
     <div class="company-products">
-      <h2 class="h2">Products by {{ $user->company_name }}</h2>
       <div class="search-results">
       @foreach ($products as $product)
           <div class="product">
