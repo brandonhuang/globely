@@ -647,7 +647,6 @@ img.infographic {
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  flex-grow: 0;
 
   .image {
     height: 80%;
@@ -718,7 +717,8 @@ img.infographic {
 
 @media (max-width: 1240px) {
   .product {
-      flex-grow: 1 !important;    
+    width: 380px !important;
+    flex-grow: 1 !important;    
   }
 }
 
@@ -730,6 +730,7 @@ img.infographic {
   display: inline-block;
   width: 150px;
   padding: 12.5px;
+  z-index: 1;
 
   /* Styles */
   background: #fff;
@@ -853,6 +854,10 @@ img.infographic {
     }
   }
 
+  .company-card {
+    margin: 0 0 0 20px;
+  }
+
   h1 {
     font-size: 2em;
     margin: 0 0 10px 0;
@@ -875,36 +880,51 @@ img.infographic {
     margin: 0;
   }
 
-  .product-header {
-    margin: 10px 0;
-    width: 100%;
-  }
+  .company-card {
+    height: 425px;
 
-  .image {
-    height: 500px;
-    width: 60%;
-    float: left;
-    box-sizing: border-box;
-    padding: 20px;
-    border-radius: 5px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    h2 {
+      color: #666;
+    }
+  }
+  
+  .product-card {
+    width: calc(100% - 270px);
     overflow: hidden;
-  }
-
-  .info {
-    position: relative;
     float: left;
-    width: 40%;
-    box-sizing: border-box;
-    padding: 20px;
-    height: 500px;
-    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
 
-    .buy {
-      position: absolute;
-      top: 435px;
+    .product-header {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .image {
+      height: 425px;
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .info {
+      position: relative;
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 20px;
+      height: 425px;
+      background-color: white;
+
+      .buy {
+        position: absolute;
+        top: 360px;
+      }
     }
   }
 }
@@ -939,6 +959,83 @@ img.infographic {
   }
 }
 
+/* COMPANY PROFILE PAGE */
+.company-card-wrapper {
+  width: 250px;
+  height: 100px;
+  float: left;
+}
+
+.company-card {
+  margin-top: 10px;
+  width: 250px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 35px;
+  border-radius: 4px;
+  text-align: center;
+
+
+  .company-picture {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 170px;
+    height: 170px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 20px 0 15px 0
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 15px 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .fa {
+    padding: 0 8px 0 0;
+  }
+
+  a {
+    color: #BBB;
+    text-decoration: none;
+
+    &:hover {
+      color: #777;
+    }
+  }
+}
+
+.profile {
+  .company-card {
+    position: fixed;
+    transform: translateY(-45%);
+  }
+
+  .h2 {
+    margin: 0 10px 25px 10px;
+  }
+
+
+  .company-products {
+    float: left;
+    width: calc(100% - 270px);
+    margin-left: 20px;
+  }
+
+  .product {
+    width: calc(50% - 20px);
+  }
+}
 
 
 
