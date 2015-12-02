@@ -74,7 +74,21 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit');
+        $user = User::find($id);
+
+        $distributor = false;
+        $supplier = false;
+
+        switch ($user->type) {
+            case 'distributor':
+                $distributor = 'checked';
+                break;
+            case 'supplier':
+                $supplier = 'checked';
+                break;
+        }
+
+        return view('users.edit', ['user' => $user, 'distributor' => $distributor, 'supplier' => $supplier]);
     }
 
     /**
@@ -86,11 +100,11 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $params = $request->input();
+
+        $user = User::find($id);
         $user->type = $params['user-type'];
         $user->email = $params['email'];
-        $user->password = bcrypt($params['password']);
         $user->company_name = $params['company-name'];
         $user->country = $params['country'];
         $user->city = $params['city'];
@@ -101,6 +115,8 @@ class UsersController extends Controller
 
         $imageName = $user->id . '.' . $request->file('image')->getClientOriginalExtension();
         $request->file('image')->move('../public/user_images/', $imageName);
+
+        return redirect()->action('UsersController@show', [$id]);
     }
 
     /**

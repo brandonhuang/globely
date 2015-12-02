@@ -29,6 +29,7 @@
 					<input id="website" name="website" type="text" required>
 					<label for="tax-id">Tax ID</label>
 					<input id="tax-id" name="tax-id" type="text" required>
+					<label>Company Logo</label>
 					<input id="image" name="image" type="file" accept="image/png" required>
 					<input class="teal" type="submit" value="Apply">
 				</form>

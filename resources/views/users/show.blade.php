@@ -56,7 +56,7 @@
             </a>
           </div>
         @endforeach
-        @if($currentUser->id == $user->id)
+        @if($currentUser->id == $user->id && $currentUser->type == 'supplier')
           <div class="add-product">
             <a href="/products/create">
               <div class="image">
