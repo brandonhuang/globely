@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="company-products">
-      <h2 class="h2">More Products by {{ $user->company_name }}</h2>
+      <h2 class="h2">Products by {{ $user->company_name }}</h2>
       <div class="search-results">
       @foreach ($products as $product)
           <div class="product">
