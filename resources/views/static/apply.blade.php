@@ -31,9 +31,27 @@
 					<input id="tax-id" name="tax-id" type="text" required>
 					<label>Company Logo</label>
 					<input id="image" name="image" type="file" accept="image/png" required>
+					<img style="max-width: 200px;" id="preview" src="#" alt="your image" />
 					<input class="teal" type="submit" value="Apply">
 				</form>
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript">
+	`	function readURL(input) {
+	        if (input.files && input.files[0]) {
+	            var reader = new FileReader();
+	            
+	            reader.onload = function (e) {
+	                $('#preview').attr('src', e.target.result);
+	            }
+	            
+	            reader.readAsDataURL(input.files[0]);
+	        }
+	    }
+	    
+	    $("#image").change(function(){
+	        readURL(this);
+	    });
+	</script>
 @stop
