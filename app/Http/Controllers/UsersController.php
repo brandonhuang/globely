@@ -74,6 +74,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
+        return view('users.edit');
     }
 
     /**
@@ -85,7 +86,21 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $params = $request->input();
+        $user->type = $params['user-type'];
+        $user->email = $params['email'];
+        $user->password = bcrypt($params['password']);
+        $user->company_name = $params['company-name'];
+        $user->country = $params['country'];
+        $user->city = $params['city'];
+        $user->website = $params['website'];
+        $user->tax_id = $params['tax-id'];
+
+        $user->save();
+
+        $imageName = $user->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move('../public/user_images/', $imageName);
     }
 
     /**

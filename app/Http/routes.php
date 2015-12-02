@@ -15,6 +15,9 @@ Route::resource('products', 'ProductsController');
 Route::resource('users', 'UsersController');
 Route::get('users', ['middleware' => 'auth','uses' => 'UsersController@index']);
 Route::get('products', ['middleware' => 'auth','uses' => 'ProductsController@index']);
+Route::get('users/{id}/edit', ['middleware' => 'auth','uses' => 'UsersController@edit']);
+Route::post('users/{id}/edit', ['middleware' => 'auth','uses' => 'UsersController@update']);
+
 
 Route::controller('/', 'StaticController');
 
