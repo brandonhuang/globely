@@ -29,7 +29,7 @@
 					<label for="tax-id">Tax ID</label>
 					<input id="tax-id" name="tax-id" type="text" value="{{ $user->tax_id }}" required>
 					<label>Company Logo</label>
-					<input id="image" name="image" type="file" accept="image/png" required>
+					<input id="image" name="image" type="file" accept="image/png">
 					<img style="max-width: 200px;" id="preview" src="#" alt="your image" />
 					<input class="teal" type="submit" value="Apply">
 				</form>
