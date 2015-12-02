@@ -105,7 +105,22 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $params = $request->input();
+
+        $product->name = $params['name'];
+        $product->company_id = $company_id;
+        $product->brand = $params['brand'];
+        $product->description = $params['description'];
+        $product->price = $params['price'];
+        $product->rating = $params['rating'];
+
+        $product->save();
+
+        $imageName = $product->id . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move('../public/product_images/', $imageName);
+
+        return redirect()->action('ProductsController@index');
 
     }
 
