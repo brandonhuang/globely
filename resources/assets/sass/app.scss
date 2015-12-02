@@ -605,8 +605,8 @@ img.infographic {
       float: left;
       width: calc(100% - 300px);
 
-      &:active {
-        z-index: 1;
+      &:focus {
+        z-index: 2;
       }
 
       &:valid {
@@ -1068,6 +1068,13 @@ img.infographic {
       width: 100%;
     }
   }
+}
+
+/* PICTURE PREVIEW */
+
+#preview {
+  width: 200px;
+  border-radius: 5px;
 }
 
 

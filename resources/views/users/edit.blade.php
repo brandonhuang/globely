@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('javascript')
+	<script src="/js/image_preview.js"></script>
+@stop
+
 @section('content')
 	<section class="form">
 		<div class="card">
@@ -29,28 +33,11 @@
 					<label for="tax-id">Tax ID</label>
 					<input id="tax-id" name="tax-id" type="text" value="{{ $user->tax_id }}" required>
 					<label>Company Logo</label>
+					<img id="preview" src="/user_images/{{ $user->id }}.png" />
 					<input id="image" name="image" type="file" accept="image/png">
-					<img style="max-width: 200px;" id="preview" src="#" alt="your image" />
 					<input class="teal" type="submit" value="Apply">
 				</form>
 			</div>
 		</div>
 	</section>
-	<script type="text/javascript">
-		function readURL(input) {
-	        if (input.files && input.files[0]) {
-	            var reader = new FileReader();
-	            
-	            reader.onload = function (e) {
-	                $('#preview').attr('src', e.target.result);
-	            }
-	            
-	            reader.readAsDataURL(input.files[0]);
-	        }
-	    }
-	    
-	    $("#image").change(function(){
-	        readURL(this);
-	    });
-	</script>
 @stop
