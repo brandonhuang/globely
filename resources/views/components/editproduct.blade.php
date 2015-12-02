@@ -5,7 +5,8 @@
 		</div>
 
 		<div class="card-content">
-			<form method="POST" action="/products" enctype="multipart/form-data">
+			<form method="POST" action="/products/{{ $product->id }}" enctype="multipart/form-data">
+				{{ method_field('PUT') }}
 				{!! csrf_field() !!}
 				<label for="name">Product Name</label>
 				<input id="name" name="name" type="text" required value= {{ $product->name }}>
