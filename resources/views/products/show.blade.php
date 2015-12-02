@@ -26,7 +26,18 @@
           </div>
         </div>
         <p>{{ $product->description }}</p>
-        <button class="buy teal">Order</button>
+        <form action="" method="POST">
+          <button type="submit" class="buy teal">Order</button>
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+            data-amount="{{ $product->price * 100 }}"
+            data-name="{{ $product->name }}"
+            data-description="{{ $product->description }} (${{ number_format($product->price, 2) }})"
+            data-image="/product_images/{{ $product->id }}.png"
+            data-locale="auto">
+          </script>
+        </form>
       </div>
     </div>
     <div class="company-card-wrapper">

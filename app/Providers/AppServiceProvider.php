@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('users.show', function($view) {
+        view()->composer(['users.show', 'components.navbar'], function($view) {
             $view->with('currentUser', Auth::user() ); // does what you expect
         });
     }

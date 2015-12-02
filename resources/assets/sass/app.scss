@@ -264,6 +264,19 @@ h4 {
     height: 100%;
   }
 
+  .nav-img {
+    border-radius: 15px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   nav {
     display: inline-block;
     float: right;
@@ -924,6 +937,10 @@ img.infographic {
       .buy {
         position: absolute;
         top: 360px;
+      }
+
+      .stripe-button-el {
+        visibility: hidden !important;
       }
     }
   }
